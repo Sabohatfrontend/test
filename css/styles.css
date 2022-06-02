@@ -1,3 +1,41 @@
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../fonts/SourceSansPro-SemiBold.woff2") format("woff2"),
+      url("../fonts/SourceSansPro-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../fonts/SourceSansPro-Regular.woff2") format("woff2"),
+      url("../fonts/SourceSansPro-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../fonts/SourceSansPro-Bold.woff2") format("woff2"),
+      url("../fonts/SourceSansPro-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root{
+  --brand-color: #F15525;
+  --blue: #38BFF2;
+  --bg-color: #EAF2F5;
+  --bg-white: #fff;
+  --text-color: #000;
+}
+
+
+
+
 /* GLOBAL */
 html{
   height: 100%;
@@ -17,11 +55,12 @@ body{
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: "Arial",sans-serif;
-  font-size: 16px;
+  font-family: "Source Sans Pro", "Arial",sans-serif;
+  font-weight: 400;
+  font-size: 15px;
   line-height: 1.5;
-  background-color: #fff;
-  color: black;
+  background-color: var(--bg-white);
+  color: var(--text-color);
 }
 
 img{
@@ -29,9 +68,144 @@ img{
   height: auto;
 }
 
+/* LOGO */
+.logo {
+  display: block;
+  cursor: pointer;
+  margin-right: 74px;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.logo:active {
+  opacity: 0.6;
+}
+
+.logo__img {
+  display: block;
+  flex-shrink: 0;
+  width: 100px;
+  height: 34px;
+  object-fit: contain;
+}
+
+/* SITENAV */
+.sitenav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sitenav__list {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  list-style: none;
+  margin: 0 50px 0 0;
+  padding: 0;
+}
+
+.sitenav__item:not(:last-child){
+  margin-right: 20px;
+}
+
+.sitenav__link {
+  display: block;
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+.sitenav__link:hover{
+  color: var(--brand-color);
+}
+
+/* Button */
+.button {
+  display: inline-block;
+  padding: 8px 16px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: var(--blue);
+  border-radius: 34px;
+  font-size: 18px;
+  flex-wrap: nowrap;
+}
+
+.button:hover{
+  background-color: var(--brand-color);
+}
+
+.button:active{
+  opacity: 0.6;
+}
+
+/* SEARCH BUTTON */
+.search-box{
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+}
+.input-search{
+  height: 50px;
+  width: 50px;
+  border-style: none;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  border: 1px solid var(--text-color);
+  transition: all .5s ease-in-out;
+  padding-right: 40px;
+  color:var(--text-color);
+}
+.input-search::placeholder{
+  color: var(--text-color);
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+.btn-search{
+  width: 50px;
+  height: 50px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  color:var(--text-color) ;
+  background-color:transparent;
+  pointer-events: painted;
+}
+.btn-search:focus ~ .input-search{
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border: none;
+  border-bottom:1px solid var(--text-color);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+.input-search:focus{
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border: none;
+  border-bottom:1px solid var(--text-color);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+
+
 .container{
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   padding-left: 50px;
   padding-right: 50px;
   margin-left: auto;
@@ -40,4 +214,23 @@ img{
 
 .main-content{
   flex-grow: 1;
+}
+
+.header-wrap{
+padding-top: 20px;
+padding-bottom: 100px;
+background-color: var(--bg-color);
+background-image: url("../img/wrap-bg.png");
+}
+/* SITE-HEADER */
+.site-header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #fff;
+  border-radius: 75px;
+}
+
+.site-header__container {
+  display: flex;
+  align-items: center;
 }
