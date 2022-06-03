@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="uz">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,42 +10,81 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
-</head>
+  </head>
+
 <body>
   <!-- SITE-HEADER -->
-  <div class="header-wrap">
-    <header class="site-header container">
-      <div class="site-header__container">
-        <a class="logo" href="index.html">
-          <img class="logo__img" src="img/logo.png" alt="Site logosi" width="100" height="34">
-        </a>
-        <!-- SITENAV -->
-        <nav class="sitenav">
-          <ul class="sitenav__list">
-            <li class="sitenav__item">
-              <a class="sitenav__link" href="#">Darsliklar</a>
-            </li>
-            <li class="sitenav__item">
-              <a class="sitenav__link" href="#">Ma'lumotnoma</a>
-            </li>
-            <li class="sitenav__item">
-              <a class="sitenav__link" href="#">Mashqlar</a>
-            </li>
-            <li class="sitenav__item">
-              <a class="sitenav__link" href="#">Videolar</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="search-box">
-          <button class="btn-search"><span>
-            <svg class="search-img" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m21 19-5.154-5.154a7 7 0 1 0-2 2L19 21l2-2ZM5 10c0-2.757 2.243-5 5-5s5 2.243 5 5-2.243 5-5 5-5-2.243-5-5Z" fill="currentColor"/></svg>
-          </span></button>
-          <input type="text" class="input-search" placeholder="Qidirish...">
+  <header class="site-header">
+    <div class="site-header__container container">
+      <a class="logo" href="index.html">
+        <img class="logo__img" src="img/logo.png" alt="Site logosi" width="150" height="75">
+      </a>
+
+      <!-- SITENAV -->
+      <nav class="sitenav">
+        <ul class="sitenav__list">
+          <li class="sitenav__item">
+            <a class="sitenav__link" href="#">Darsliklar</a>
+          </li>
+          <li class="sitenav__item">
+            <a class="sitenav__link" href="#">Ma'lumotnoma</a>
+          </li>
+          <li class="sitenav__item">
+            <a class="sitenav__link" href="#">Mashqlar</a>
+          </li>
+          <li class="sitenav__item">
+            <a class="sitenav__link" href="#">Videolar</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- SEARCH-->
+      <form class="search-form" action="/action_page.php">
+       <div class="search-box search-box__header">
+        <input class="input-search input-search__header" type="search" autocomplete="off" placeholder="Qidirish...">
+        <button class="btn-search btn__header">
+          <span>
+            <svg class="search-img" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="m21 19-5.154-5.154a7 7 0 1 0-2 2L19 21l2-2ZM5 10c0-2.757 2.243-5 5-5s5 2.243 5 5-2.243 5-5 5-5-2.243-5-5Z"
+                fill="currentColor" />
+            </svg>
+          </span>
+        </button>
+       </div>
+      </form>
+      <a class="button" href="#">Kirish</a>
+
+
+    </div>
+  </header>
+<div class="main-content">
+  <section class="hero">
+    <div class="hero-container container">
+        <div class="hero-content">
+          <h2 class="hero-header"><span class="hero-header-color">{</span>Programmalashni<span class="hero-header-color">}</span></h2>
+          <p class="hero-text">o'zbek tilida biz bilan birga o'rganing!!!</p>
+        <!-- SEARCH -->
+        <form class="search-form" action="/action_page.php">
+          <div class="search-box">
+           <input class="input-search" type="search" autocomplete="off" placeholder="Qidirish...">
+           <button class="btn-search">
+             <span>
+               <svg class="search-img" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 <path
+                   d="m21 19-5.154-5.154a7 7 0 1 0-2 2L19 21l2-2ZM5 10c0-2.757 2.243-5 5-5s5 2.243 5 5-2.243 5-5 5-5-2.243-5-5Z"
+                   fill="currentColor" />
+               </svg>
+             </span>
+           </button>
+          </div>
+         </form>
         </div>
-        <a class="button" href="#">Kirish</a>
-      </div>
-    </header>
-  </div>
-<script src="js/main.js"></script>
+        <img class="hero-img" src="img/Code.png" alt="" width="393" height="410" srcset="img/Code.png 1x, img/Code@2x.png 2x">
+    </div>
+
+  </section>
+</div>
+  <script src="js/main.js"></script>
 </body>
+
 </html>
