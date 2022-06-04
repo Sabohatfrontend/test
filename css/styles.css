@@ -183,6 +183,14 @@ border-top-left-radius:0;
  border-bottom-left-radius:0;
 }
 
+.btn-search:hover{
+  opacity: 0.8;
+}
+
+.btn-search:active{
+  opacity: 0.6;
+}
+
 .search-img {
   display: block;
   width: 24px;
@@ -255,6 +263,7 @@ border-top-left-radius:0;
 /* HERO */
 
 .hero{
+  position: relative;
   padding-top: 70px;
   padding-bottom: 100px;
   background-color: var(--bg-color);
