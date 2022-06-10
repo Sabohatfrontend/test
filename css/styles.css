@@ -303,3 +303,48 @@ border-top-left-radius:0;
  .hero-header-color{
    color: var(--brand-color);
  }
+
+ /* FEATURES */
+ .features {
+  padding-top: 103px;
+  padding-bottom: 103px;
+}
+
+.feature-header {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 35px;
+  font-size: 46px;
+  line-height: 46px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.features-wrapper {
+  display: flex;
+  padding: 85px 104px;
+  justify-content: flex-end;
+  border-radius: 48px;
+  background-color: var(--bg-color);
+  background-image: url("../img/man-with-comp.png");
+  background-repeat:no-repeat;
+  background-position: left 130px bottom;
+}
+
+.button__features{
+  display: block;
+  margin-bottom: 25px;
+  text-align: center;
+}
+.features-content {
+  max-width: 386px;
+  width: 100%;
+}
+
+.features-text {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  line-height: 25px;
+  font-size: 20px;
+}
